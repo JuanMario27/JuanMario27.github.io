@@ -3,13 +3,11 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      theme: {
-        colors: {
-          darkblue: {
-            100: '#2237D1',
-            200: '#182691',
-            300: '#090F37',
-          },
+      colors: {
+        darkblue: {
+          100: '#2237D1',
+          200: '#182691',
+          300: '#090F37',
         },
         fontFamily: {
           vietnam_pro: ['Be Vietnam Pro'],
