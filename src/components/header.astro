@@ -1,0 +1,141 @@
+<header class="top-0 z-10 bg-white shadow-sm header">
+  <div class="container flex mx-auto p-6 justify-between">
+    <a href="/">
+      <img src="/logo.svg" class="h-8" alt="intest" />
+    </a>
+    <a
+      id="menu-button"
+      class="md:hidden cursor-pointer flex justify-center items-center h-8 w-8 z-11">
+      <span
+        class="block relative h-0.5 bg-darkblue-300 w-8 after:absolute after:rounded after:w-full after:h-full after:-translate-y-2.5 after:bg-darkblue-300 before:bg-darkblue-300 before:absolute before:rounded before:w-full before:h-full before:translate-y-2.5"
+      ></span>
+    </a>
+    <nav aria-label="main" class="hidden md:flex">
+      <ul class="flex flex-row justify-end line-clamp-1">
+        <li class="px-4 mr-4">
+          <a
+            href="/"
+            class="text-center leading-8 uppercase text-darkblue-300 hover:text-darkblue-200 font-vietnam_pro font-semibold"
+            >Inicio</a
+          >
+        </li>
+        <li class="px-4 mr-4">
+          <a
+            href="blog"
+            class="text-center leading-8 uppercase text-darkblue-300 hover:text-darkblue-200 font-vietnam_pro font-semibold"
+            >Blog</a
+          >
+        </li>
+        <li class="px-4">
+          <a
+            href="#contact"
+            class="text-center leading-8 uppercase text-darkblue-300 hover:text-darkblue-200 font-vietnam_pro font-semibold"
+            >Contacto</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section
+  aria-label="mobile"
+  id="menu-mobile"
+  class="fixed top-0 w-full bg-darkblue-300 justify-center menu z-20">
+  <div class="flex flex-col">
+    <a
+      class="h-8 w-8 cursor-pointer self-end m-6 flex justify-center items-center relative close"
+      id="close-button">
+      <span class="h-0.5 bg-white w-8 rotate-45 block absolute"></span>
+      <span class="h-0.5 bg-white w-8 -rotate-45 block absolute"></span>
+    </a>
+    <nav class="flex justify-center nav py-28">
+      <ul class="w-full text-4xl text-center font-bold font-vietnam_pro">
+        <li class="my-4 translate-x-full opacity-0">
+          <a
+            href="/"
+            class="leading-8 uppercase text-gray-300 hover:text-white">
+            Inicio
+          </a>
+        </li>
+        <li class="my-4 translate-x-full opacity-0">
+          <a
+            href="/blog"
+            class="leading-8 uppercase text-gray-300 hover:text-white">
+            Blog
+          </a>
+        </li>
+        <li class="my-4 translate-x-full opacity-0">
+          <a
+            href="#contact"
+            class="leading-8 uppercase text-gray-300 hover:text-white">
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+<style>
+  .h-sticky {
+    position: sticky;
+    animation: 800ms ease-in-out 0s normal none 1 running slideInDown;
+  }
+
+  .nav {
+    height: calc(100vh - 4.25rem);
+  }
+
+  .nav li {
+    transition: opacity 400ms ease-in-out,
+      transform 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .menu {
+    clip-path: circle(200px at top right);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 800ms 500ms, clip-path 1000ms 500ms,
+      visibility 200ms 800ms;
+  }
+  .close {
+    transition: transform 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .close:hover {
+    transform: rotate(180deg);
+  }
+  .menu-active {
+    clip-path: circle(100% at center);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-active li {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .menu-active li:nth-child(1) {
+    transition-delay: 700ms;
+  }
+
+  .menu-active li:nth-child(2) {
+    transition-delay: 900ms;
+  }
+
+  .menu-active li:nth-child(3) {
+    transition-delay: 1100ms;
+  }
+
+  @keyframes slideInDown {
+    from {
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+</style>

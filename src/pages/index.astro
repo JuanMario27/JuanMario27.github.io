@@ -1,15 +1,18 @@
 ---
+import Head from '../components/head.astro';
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import {SITE_TITLE, SITE_DESCRIPTION} from '../constants';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="min-h-screen bg-slate-50">
+    <Header />
+    <h1>Astro</h1>
+    <Footer title="intest" />
+    <script src="../js/main.js"></script>
+  </body>
 </html>
