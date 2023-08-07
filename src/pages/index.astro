@@ -3,6 +3,7 @@ import Head from '../components/head.astro';
 import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 import {SITE_TITLE, SITE_DESCRIPTION} from '../constants';
+import Counting from '../components/counting.astro';
 ---
 
 <html lang="en">
@@ -11,8 +12,8 @@ import {SITE_TITLE, SITE_DESCRIPTION} from '../constants';
   </head>
   <body class="min-h-screen bg-slate-50">
     <Header />
-    <main class="container mx-auto p-4">
-      <h1>Astro</h1>
+    <main>
+      <Counting />
     </main>
     <Footer />
     <script src="../js/main.js"></script>
