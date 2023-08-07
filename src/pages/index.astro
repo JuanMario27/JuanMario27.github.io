@@ -3,8 +3,10 @@ import Head from '../components/head.astro';
 import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 import Hero from '../components/hero.astro';
-import {SITE_TITLE, SITE_DESCRIPTION} from '../constants';
 import Counting from '../components/counting.astro';
+import Services from '../components/services.astro';
+
+import {SITE_TITLE, SITE_DESCRIPTION} from '../constants';
 ---
 
 <html lang="en">
@@ -16,6 +18,7 @@ import Counting from '../components/counting.astro';
     <Hero />
     <main>
       <Counting />
+      <Services />
     </main>
     <Footer />
     <script src="../js/main.js"></script>
