@@ -9,9 +9,9 @@ module.exports = {
           200: '#182691',
           300: '#090F37',
         },
-        fontFamily: {
-          vietnam_pro: ['Be Vietnam Pro'],
-        },
+      },
+      fontFamily: {
+        vietnam_pro: ['Be Vietnam Pro'],
       },
     },
   },
