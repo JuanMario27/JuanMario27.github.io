@@ -1,6 +1,10 @@
+---
+import {SITE_URL} from '../constants';
+---
+
 <header class="top-0 z-10 bg-white shadow-sm header">
   <div class="container flex mx-auto p-6 justify-between">
-    <a href="/">
+    <a href={SITE_URL}>
       <img src="/logo.svg" class="h-8" alt="intest" />
     </a>
     <a
@@ -14,14 +18,14 @@
       <ul class="flex flex-row justify-end line-clamp-1">
         <li class="px-4 mr-4">
           <a
-            href="/"
+            href={SITE_URL}
             class="text-center leading-8 uppercase text-darkblue-300 hover:text-darkblue-200 font-vietnam_pro font-semibold"
             >Inicio</a
           >
         </li>
         <li class="px-4 mr-4">
           <a
-            href="blog"
+            href={`${SITE_URL}/blog`}
             class="text-center leading-8 uppercase text-darkblue-300 hover:text-darkblue-200 font-vietnam_pro font-semibold"
             >Blog</a
           >

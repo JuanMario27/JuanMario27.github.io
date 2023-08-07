@@ -2,8 +2,8 @@
 import type {CollectionEntry} from 'astro:content';
 type Props = CollectionEntry<'blog'>['data'];
 import {Image} from '@astrojs/image/components';
+import DateFormated from './date.astro';
 const {title, author, pubDate, heroImage, description, url} = Astro.props;
-const date = new Date(pubDate).toLocaleString('es-CO').split(',')[0];
 ---
 
 <article>
@@ -32,10 +32,10 @@ const date = new Date(pubDate).toLocaleString('es-CO').split(',')[0];
         {title}
       </h3>
     </a>
-    <p class="flex flex-row mb-4">
-      <span class="font-vietnam_pro text-gray-600">{author}</span>
-      &nbsp&nbsp;-&nbsp&nbsp;
-      <date class="font-vietnam_pro text-gray-600">{date}</date>
+    <p class="flex flex-row mb-4 text-[#60739F] italic">
+      <span class="font-vietnam_pro">{author}</span>
+      &nbsp&nbsp;/&nbsp&nbsp;
+      <DateFormated classNames="font-vietnam_pro  " date={pubDate} />
     </p>
     <p class="font-vietnam_pro text-sm text-gray-600">{description}</p>
   </div>
