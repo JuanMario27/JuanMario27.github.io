@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.post {
+  width: 960px;
+  max-width: calc(100% - 2em);
+}
+
+.title1,
+.title2,
+.title3,
+.title4 {
+  @apply font-vietnam_pro mb-4 text-gray-700;
+}
+
+.title1 {
+  @apply text-6xl font-extrabold;
+}
+
+.title2 {
+  @apply text-4xl font-bold;
+}
+
+.title3 {
+  @apply text-3xl font-semibold;
+}
+
+.title4 {
+  @apply text-xl font-semibold;
+}
+
+.paragraph {
+  @apply text-lg font-vietnam_pro mb-4 text-gray-600;
+}
+
+.photo {
+  @apply rounded-lg shadow-lg mb-4;
+}
+
+.blockquote {
+  @apply border-l-4 border-gray-500 mx-4 my-8 pl-8 italic text-gray-500 text-xl font-light;
+}
+
+.table {
+  @apply w-3/4 my-6 mx-auto text-center;
+}
+
+.table_cell {
+  @apply border-b-2 border-gray-200;
+}
+
+.ulist,
+.olist {
+  @apply font-vietnam_pro text-gray-600 pl-4 mb-4;
+}
+
+.ulist {
+  @apply list-disc;
+}
+
+.olist {
+  @apply list-decimal;
+}
+
+.keyboard {
+  font-family: 'monospace';
+}
+
+.paragraph mark {
+  @apply bg-darkblue-300 text-white p-1;
+}
+
+.inline-code {
+  @apply bg-gray-200 p-1;
+}
+
+.astro-code {
+  @apply my-8 p-4 rounded-lg shadow-lg;
+}

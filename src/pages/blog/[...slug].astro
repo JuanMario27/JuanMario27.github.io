@@ -1,4 +1,6 @@
 ---
+import '../../styles/blog.css';
+
 import {CollectionEntry, getCollection} from 'astro:content';
 import Head from '../../components/head.astro';
 import Header from '../../components/header.astro';
@@ -23,12 +25,6 @@ const {Content} = await post.render();
 <html lang="en">
   <head>
     <Head title={data.title} description={data.description} />
-    <style>
-      .post {
-        width: 960px;
-        max-width: calc(100% - 2em);
-      }
-    </style>
   </head>
   <body class="min-h-screen bg-slate-50">
     <Header />
