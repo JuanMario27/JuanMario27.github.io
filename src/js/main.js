@@ -31,7 +31,11 @@ class App {
     if (!Boolean(document.startViewTransition)) return;
     navigation.addEventListener('navigate', event => {
       const destination = new URL(event.destination.url);
-      if (location.origin !== destination.origin) return;
+      if (
+        location.origin !== destination.origin ||
+        destination.pathname === '/'
+      )
+        return;
 
       event.intercept({
         async handler() {

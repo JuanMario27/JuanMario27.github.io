@@ -1,0 +1,51 @@
+<section
+  class="relative before:w-full before:h-full before:absolute before:top-0 before:left-0 before:-z-10 pointer-events-none mb-8 video">
+  <div
+    class="absolute -z-20 inset-0 overflow-hidden bg-no-repeat bg-cover bg-transparent bg-image">
+    <video
+      autoplay
+      loop
+      muted
+      preload="auto"
+      src="video.mp4"
+      class="m-auto absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 visible w-full h-auto"
+    ></video>
+  </div>˝
+  <div
+    class="video-content flex flex-col items-center h-full justify-center text-center z-20 px-6 opacity-100">
+    <h2
+      class="font-vietnam_pro font-extrabold text-3xl lg:text-6xl text-white mb-8 shadow">
+      ESTRUCTUREMOS
+      <br />EL FUTURO
+    </h2>
+    <p class="font-vietnam_pro text-white text-lg lg:text-2xl mb-8">
+      Desarrollamos y diseñamos estructuras <br /> llenas de integridad y detalle.
+    </p>
+  </div>
+
+  <style>
+    .video,
+    .video-content {
+      min-height: calc(100vh - 160px);
+    }
+    .video::before {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .video > div {
+      background-image: none;
+      background-position: 50% 50%;
+    }
+    .shadow {
+      text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+    }
+    p {
+      color: white;
+    }
+    @media (max-width: 768px) {
+      .video video {
+        height: calc(100vh - 160px);
+        object-fit: cover;
+      }
+    }
+  </style>
+</section>
