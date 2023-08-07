@@ -10,11 +10,20 @@ const date = new Date(pubDate).toLocaleString('es-CO').split(',')[0];
   <a
     href={`/blog/${url}/`}
     class="block relative before:bg-gray-500 before:w-full before:h-full before:absolute before:top-0 before:left-0 before:opacity-0 before:ease-in hover:before:opacity-40 duration-700">
-    <img
-      src={heroImage}
-      alt={title}
-      class="overflow-hidden object-cover object-center"
-    />
+    {
+      heroImage && (
+        <Image
+          src={heroImage}
+          format="avif"
+          height={220}
+          width={440}
+          aspectRatio={2.0}
+          alt={title}
+          class="overflow-hidden object-cover object-center w-auto"
+          style={`view-transition-name: ${url}`}
+        />
+      )
+    }
   </a>
   <div class="bg-white p-6 border-gray-200 border-1">
     <a href={`/blog/${url}/`}>
