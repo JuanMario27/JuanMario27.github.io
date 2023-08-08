@@ -78,3 +78,21 @@
 .astro-code {
   @apply my-8 p-4 rounded-lg shadow-lg;
 }
+
+@media (max-width: 768px) {
+  .title1 {
+    @apply text-3xl font-extrabold;
+  }
+
+  .title2 {
+    @apply text-2xl font-bold;
+  }
+
+  .title3 {
+    @apply text-xl font-semibold;
+  }
+
+  .title4 {
+    @apply text-lg font-semibold;
+  }
+}

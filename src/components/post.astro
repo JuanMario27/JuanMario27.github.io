@@ -16,26 +16,27 @@ const {title, author, pubDate, heroImage, description, url} = Astro.props;
           src={heroImage}
           format="avif"
           height={220}
-          width={440}
+          width={420}
           aspectRatio={2.0}
           alt={title}
-          class="overflow-hidden object-cover object-center w-auto"
+          class="overflow-hidden object-cover object-center w-auto rounded-t-lg˝"
           style={`view-transition-name: ${url}`}
         />
       )
     }
   </a>
-  <div class="bg-white p-6 border-gray-200 border-1">
+  <div class="bg-white p-6 border-gray-200 border-1 rounded-b-lg">
     <a href={`/blog/${url}/`}>
       <h3
         class="font-vietnam_pro font-bold uppercase mb-2 text-gray-700 text-xl hover:text-darkblue-200 cursor-pointer transition hover:ease-in duration-700">
         {title}
       </h3>
     </a>
-    <p class="flex flex-row mb-4 text-[#60739F] italic">
+    <p
+      class="flex flex-row mb-4 text-[#60739F] italic md:text-[16px] text-[12px]">
       <span class="font-vietnam_pro">{author}</span>
       &nbsp&nbsp;/&nbsp&nbsp;
-      <DateFormated classNames="font-vietnam_pro  " date={pubDate} />
+      <DateFormated classNames="font-vietnam_pro" date={pubDate} />
     </p>
     <p class="font-vietnam_pro text-sm text-gray-500">{description}</p>
   </div>

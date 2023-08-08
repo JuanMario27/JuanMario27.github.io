@@ -22,7 +22,7 @@ const {data} = post;
 const {Content} = await post.render();
 ---
 
-<html lang="en">
+<html lang="es">
   <head>
     <Head title={data.title} description={data.description} />
   </head>
@@ -37,7 +37,7 @@ const {Content} = await post.render();
           width={1024}
           height={510}
           aspectRatio={2.0}
-          class="overflow-hidden object-cover object-center my-8 rounded-lg mx-auto shadow hover:shadow-2xl transition hover:ease-in"
+          class="overflow-hidden object-cover object-center lg:my-8 lg:rounded-lg mx-auto shadow hover:shadow-2xl transition hover:ease-in"
           style={`view-transition-name: ${post.slug}`}
         />
       )
@@ -50,7 +50,7 @@ const {Content} = await post.render();
           <span class="text-[#60739F] italic">{data.author}</span>
         </div>
         <h1
-          class="uppercase text-center text-6xl font-vietnam_pro font-extrabold mb-4 text-gray-700">
+          class="uppercase text-center text-4xl lg:text-6xl font-vietnam_pro font-extrabold mb-4 text-gray-700">
           {data.title}
         </h1>
         <hr />
