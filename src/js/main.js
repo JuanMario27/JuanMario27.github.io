@@ -41,7 +41,7 @@ class App {
         async handler() {
           const response = await fetch(destination.pathname);
           const content = await response.text();
-          const [, data] = content.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+          const [, data] = content.match(/<html[^>]*>([\s\S]*)<\/html>/i);
           document.startViewTransition(() => {
             document.body.innerHTML = data;
             document.documentElement.scrollTop = 0;
