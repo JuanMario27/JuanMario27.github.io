@@ -8,6 +8,7 @@ import image from '@astrojs/image';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), sitemap(), image()],
+  site: 'https://www.my-site.dev',
   markdown: {
     rehypePlugins: [
       [
