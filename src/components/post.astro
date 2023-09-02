@@ -1,7 +1,6 @@
 ---
 import type {CollectionEntry} from 'astro:content';
 type Props = CollectionEntry<'blog'>['data'];
-import {Image} from '@astrojs/image/components';
 import DateFormated from './date.astro';
 const {title, author, pubDate, heroImage, description, url} = Astro.props;
 ---
@@ -12,12 +11,10 @@ const {title, author, pubDate, heroImage, description, url} = Astro.props;
     class="block relative before:bg-gray-500 before:w-full before:h-full before:absolute before:top-0 before:left-0 before:opacity-0 before:ease-in hover:before:opacity-40 duration-700">
     {
       heroImage && (
-        <Image
+        <img
           src={heroImage}
-          format="avif"
           height={220}
           width={420}
-          aspectRatio={2.0}
           alt={title}
           class="overflow-hidden object-cover object-center w-auto rounded-t-lg˝"
           style={`view-transition-name: ${url}`}

@@ -1,12 +1,11 @@
 ---
 import '../../styles/blog.css';
 
-import {CollectionEntry, getCollection} from 'astro:content';
+import {type CollectionEntry, getCollection} from 'astro:content';
 import Head from '../../components/head.astro';
 import Header from '../../components/header.astro';
 import Footer from '../../components/footer.astro';
 import Date from '../../components/date.astro';
-import {Image} from '@astrojs/image/components';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -30,13 +29,11 @@ const {Content} = await post.render();
     <Header />
     {
       data.heroImage && (
-        <Image
+        <img
           src={data.heroImage}
-          format="avif"
           alt={data.title}
           width={1024}
           height={510}
-          aspectRatio={2.0}
           class="overflow-hidden object-cover object-center lg:my-8 lg:rounded-lg mx-auto shadow hover:shadow-2xl transition hover:ease-in"
           style={`view-transition-name: ${post.slug}`}
         />

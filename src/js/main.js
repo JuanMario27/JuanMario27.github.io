@@ -20,35 +20,10 @@ class App {
     this.closeButton.addEventListener('click', () => {
       this.toggleMenu();
     });
-    this.interceptNavigation();
   }
 
   toggleMenu() {
     this.menuMobile?.classList.toggle('menu-active');
-  }
-
-  interceptNavigation() {
-    if (!Boolean(document.startViewTransition)) return;
-    navigation.addEventListener('navigate', event => {
-      const destination = new URL(event.destination.url);
-      if (
-        location.origin !== destination.origin ||
-        destination.pathname === '/'
-      )
-        return;
-
-      event.intercept({
-        async handler() {
-          const response = await fetch(destination.pathname);
-          const content = await response.text();
-          const [, data] = content.match(/<html[^>]*>([\s\S]*)<\/html>/i);
-          document.startViewTransition(() => {
-            document.body.innerHTML = data;
-            document.documentElement.scrollTop = 0;
-          });
-        },
-      });
-    });
   }
 
   countingAnimation() {

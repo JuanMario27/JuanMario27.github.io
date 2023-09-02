@@ -3,11 +3,9 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import addClasses from 'rehype-add-classes';
 
-import image from '@astrojs/image';
-
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), sitemap(), image()],
+  integrations: [tailwind(), sitemap()],
   site: 'https://www.my-site.dev',
   markdown: {
     rehypePlugins: [
