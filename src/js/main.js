@@ -27,7 +27,7 @@ class App {
 
   hidePreload() {
     setTimeout(() => {
-      this.preload.classList.remove('show');
+      this.preload?.classList.remove('show');
     }, 1500);
   }
 
