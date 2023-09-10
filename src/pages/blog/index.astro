@@ -17,6 +17,11 @@ const posts = (await getCollection('blog')).sort(
   </head>
   <body class="min-h-screen bg-slate-50">
     <Header />
+    <div class="relative overflow-hidden h-[200px] bg-image bg-no-repeat bg-cover flex items-center" style="background-image: url('./blog.jpg')">
+      <div class="container mx-auto px-4">
+        <h2 class="text-white font-vietnam_pro font-extrabold text-4xl uppercase">Blog</h2>
+      </div>
+    </div>
     <main class="container mx-auto p-4">
       <section
         class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-36 my-20 text-">
