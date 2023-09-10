@@ -27,7 +27,9 @@ class App {
     this.observer = new IntersectionObserver(this.countingAnimation, {
       threshold: 1,
     });
-    this.observer.observe(this.counting);
+    if (this.counting != undefined) {
+      this.observer.observe(this.counting);
+    }
   }
 
   toggleMenu() {
