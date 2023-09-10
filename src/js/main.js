@@ -5,9 +5,11 @@ class App {
     this.menuMobile = document.getElementById('menu-mobile');
     this.header = document.querySelector('.header');
     this.counting = document.getElementById('counting');
+    this.preload = document.getElementById('preloader');
   }
   init() {
     this.bindUIActions();
+    this.hidePreload();
     this.bindInterceptor();
   }
 
@@ -21,6 +23,12 @@ class App {
     this.closeButton.addEventListener('click', () => {
       this.toggleMenu();
     });
+  }
+
+  hidePreload() {
+    setTimeout(() => {
+      this.preload.classList.remove('show');
+    }, 1500);
   }
 
   bindInterceptor() {
