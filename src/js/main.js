@@ -6,6 +6,7 @@ class App {
     this.header = document.querySelector('.header');
     this.counting = document.getElementById('counting');
     this.preload = document.getElementById('preloader');
+    this.whatsapp = document.getElementById('whatsapp');
   }
   init() {
     this.bindUIActions();
@@ -16,6 +17,9 @@ class App {
   bindUIActions() {
     window?.addEventListener('scroll', _ => {
       this.header?.classList.toggle('h-sticky', window.scrollY > 150);
+    });
+    window?.addEventListener('scroll', _ => {
+      this.whatsapp?.classList.toggle('show', window.scrollY > 400);
     });
     this.openButton.addEventListener('click', () => {
       this.toggleMenu();

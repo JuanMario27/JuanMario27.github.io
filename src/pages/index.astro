@@ -5,6 +5,9 @@ import Footer from '../components/footer.astro';
 import Hero from '../components/hero.astro';
 import Counting from '../components/counting.astro';
 import Services from '../components/services.astro';
+import Loader from '../components/loader.astro';
+import Gallery from '../components/gallery.astro';
+import Whatsapp from '../components/whatsapp.astro';
 
 import {SITE_TITLE, SITE_DESCRIPTION} from '../constants';
 ---
@@ -14,13 +17,15 @@ import {SITE_TITLE, SITE_DESCRIPTION} from '../constants';
     <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="min-h-screen bg-slate-50">
+    <Loader />
     <Header />
     <Hero />
     <main>
+      <Gallery />
       <Counting />
       <Services />
     </main>
     <Footer />
-    <script src="../js/main.js"></script>
+    <Whatsapp />
   </body>
 </html>
