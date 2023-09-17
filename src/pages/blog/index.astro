@@ -8,7 +8,9 @@ import Loader from '../../components/loader.astro';
 import Whatsapp from '../../components/whatsapp.astro';
 import {SITE_TITLE, SITE_DESCRIPTION} from '../../constants';
 
-const posts = (await getCollection('blog')).sort(
+const posts = (await getCollection('blog')).filter((post) => {
+  return import.meta.env.PROD ? post.data.published : true;
+}).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );
 ---
@@ -29,16 +31,13 @@ const posts = (await getCollection('blog')).sort(
       <section
         class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-36 my-20 text-">
         {
-          posts.map(post => (
+          posts.map(post => {
+            return (
             <Post
               url={post.slug}
-              title={post.data.title}
-              description={post.data.description}
-              heroImage={post.data.heroImage}
-              author={post.data.author}
-              pubDate={post.data.pubDate}
+              {...post.data}
             />
-          ))
+          )})
         }
       </section>
     </main>
