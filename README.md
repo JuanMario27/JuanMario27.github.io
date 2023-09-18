@@ -1,47 +1,50 @@
-# Astro Starter Kit: Minimal
+# Intest: manual de uso de la página web
 
-```
-npm create astro@latest -- --template minimal
-```
+## ⬇️ Instalaciones necesarias
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+- nodeJS v18 o superior: https://nodejs.org/es
+- git: https://git-scm.com/downloads
+- Un editor de código, el recomendado es Visual Studio Code: https://code.visualstudio.com/
+- Una terminal de comandos, se recomienda git bash (viene con la instalación de git)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## ⚙️ Configuraciones necesarias
 
-## 🚀 Project Structure
+Para poder correr el proyecto en tu maquina local es necesario clonar el repositorio desde GitHub, para tal fin es necesario configurar una llave ssh para poder establecer una conexión segura y correr los comandos necesarios vía terminal.
 
-Inside of your Astro project, you'll see the following folders and files:
+- Guía de como generar una llave ssh en windows: https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+- Guía de como de agregar una llave ssh a a Github: https://docs.github.com/es/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=windows
+
+Una vez configurado correctamente git y GitHub el siguiente paso es clonar el repositorio, para esto te invitamos a consultar la siguiente guía: https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository?tool=webui
+
+## 🚀 Estructura del proyecto
+
+Dentro de la carpeta del proyecto, verás las siguientes carpetas y archivos:
 
 ```
 /
 ├── public/
 ├── src/
+│   ├── constanst.ts
+│   ├── components
+│   ├── content
+│   │   └── blog/
+│   ├── js
+│   ├── styles
 │   └── pages/
+│       ├── blog/
+│       │    ├── [...slug].astro
+│       │    └── index.astro
 │       └── index.astro
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🧞 Comandos
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 
-Any static assets, like images, can be placed in the `public/` directory.
+| Command       | Action                                       |
+| :------------ | :------------------------------------------- |
+| `npm install` | Para instalar dependencias                   |
+| `npm run dev` | Inicia el servidor local en `localhost:4321` |
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📚 Como agregar post a la web
