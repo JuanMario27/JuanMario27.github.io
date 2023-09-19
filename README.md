@@ -1,5 +1,7 @@
 # Intest: manual de uso de la página web
 
+<img src="https://juanmario27.github.io/logo.svg" width="300px"/>
+
 ## ⬇️ Instalaciones necesarias
 
 - nodeJS v18 o superior: https://nodejs.org/es
@@ -47,4 +49,7 @@ Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 | `npm install` | Para instalar dependencias                   |
 | `npm run dev` | Inicia el servidor local en `localhost:4321` |
 
-## 📚 Como agregar post a la web
+## 📝 Como agregar post a la web
+
+
+
