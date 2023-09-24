@@ -1,4 +1,4 @@
-<img src="https://juanmario27.github.io/logo.svg" width="300px" style="margin: 0 auto"/>
+<img src="https://juanmario27.github.io/logo.svg" width="300px"/>
 
 # Intest: manual de uso de la página web
 
@@ -87,22 +87,37 @@ published: false
 ---
 ```
 
-**NOTA:** todos las variables son obligatorias para que el post funcione de manera correcta. 
+**NOTA:** todos las variables son obligatorias para que el post funcione de manera correcta.
 
 - **title**: es el título que se le nuestra en los resultados de búsqueda.
 - **description**: es el título que se le nuestra en los resultados de búsqueda.
 - **pubDate**: Hace referencia a la fecha de publicación del post.
 - **author**: hace referencia a quien escribió el post.
-- **‌heroImage**: es la imagen de encabezado del post. 
+- **‌heroImage**: es la imagen de encabezado del post.
 - **published**: permite definir si un post aparecerá en la página web (si esta en "false" la publicación no será visible), si se corre la web de forma local por defecto se mostraran todos los post así `published` se haya puesto como false.
 
-<img src="./doc/post.png" height="300px" style="margin: 0 auto"/>
+<img src="./doc/post.png"/>
 
 ### Agregar la imagen de encabezado del post
 
-La imagen de encabezado debe agregarse a la carpeta `/public` esta imagen debe tener 960px de ancho  por 480px de alto, una vez agregada a la carpeta de debe agregar el nombre del archivo a la variable `heroImage` como se muestra en el ejemplo del inciso anterior. Puede tomar como guía el archivo [blog-placeholder-1.jpg](./public/blog-placeholder-1.jpg) que se encuentra en el repositorio. 
+La imagen de encabezado debe agregarse a la carpeta `/public` esta imagen debe tener 960px de ancho  por 480px de alto, una vez agregada a la carpeta de debe agregar el nombre del archivo a la variable `heroImage` como se muestra en el ejemplo del inciso anterior. Puede tomar como guía el archivo [blog-placeholder-1.jpg](./public/blog-placeholder-1.jpg) que se encuentra en el repositorio.
 
 ### Escribir el contenido del post
-Para escribir el contendido del post se usa el lenguaje de marcado, el cual facilita la aplicación de formatos al texto a través de caracteres especiales, para consultar la sintaxis puede consultar el post de ejemplo [markdown-style-guide.md](./src/blog/content/markdown-style-guide.md) que se encuentra en el repositorio o consultar el siguiente video: [Markdown, Curso Práctico para principiantes](https://www.youtube.com/watch?v=oxaH9CFpeEE)
 
-### Subir los cambios al repositorio    
+Para escribir el contendido del post se usa el lenguaje de marcado, el cual facilita la aplicación de formatos al texto a través de caracteres especiales, para consultar la sintaxis puede consultar el post de ejemplo [markdown-style-guide.md](./src/content/blog/markdown-style-guide.md) que se encuentra en el repositorio o consultar el siguiente video: [Markdown, Curso Práctico para principiantes](https://www.youtube.com/watch?v=oxaH9CFpeEE)
+
+### Subir los cambios al repositorio
+
+Para subir y publicar los post al repositorio es necesario utilizar git, a continuación se muestran los comandos necesarios:
+
+```bash
+~ git add . #agregar los archivos a git
+~ git commit -m"create new post" #crear un commit con los archivos
+~ git push origin main #subit los archivos al repositorio
+```
+
+**Nota**: se recomienda que el mensaje que se agrega en el comando `git commit` tenga relación con el nombre del post que se publica.
+
+```bash
+~ git commit -m"publish markdown-style-guide post"
+```
