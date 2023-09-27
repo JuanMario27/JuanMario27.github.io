@@ -4,4 +4,4 @@
 export const SITE_TITLE = 'intest | integrando estructuras';
 export const SITE_DESCRIPTION =
   'Trabajamos en el desarrollo de estructuras económicas, seguras y funcionales, nuestra comunicación cercana con los clientes impulsa proyectos de alto valor técnico y eficiencia garantizada.';
-export const SITE_PHONE = '+573015660438';
+export const SITE_PHONE = '+573194449408';
