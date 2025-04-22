@@ -49,23 +49,21 @@ class App {
   }
 
   countingAnimation(entries, __) {
-    if (entries[0].isIntersecting) {
-      const counters = document.querySelectorAll('.num');
-      counters.forEach(counter => {
-        const updateCounter = () => {
-          const target = parseInt(counter.getAttribute('data-val'));
-          const increment = target / 500;
-          const c = +counter.textContent;
-          if (c < target) {
-            counter.textContent = `+${Math.ceil(c + increment)}`;
-            setTimeout(updateCounter, 2);
-          } else {
-            counter.textContent = `+${target}`;
-          }
-        };
-        updateCounter();
-      });
-    }
+    const counters = document.querySelectorAll('.num');
+    counters.forEach(counter => {
+      const updateCounter = () => {
+        const target = parseInt(counter.getAttribute('data-val'));
+        const increment = target / 500;
+        const c = +counter.textContent;
+        if (c < target) {
+          counter.textContent = `+${Math.ceil(c + increment)}`;
+          setTimeout(updateCounter, 2);
+        } else {
+          counter.textContent = `+${target}`;
+        }
+      };
+      updateCounter();
+    });
   }
 }
 
